@@ -5,8 +5,7 @@ const config = {
     user: process.env.POSTGRES_USER,
     pass: process.env.POSTGRES_PASSWORD,
     db: process.env.POSTGRES_DB,
-    ssl: true,
-    debug: true,
+    ssl: process.env.POSTGRES_SSL === 'true',
 };
 
 const sql = postgres(config);

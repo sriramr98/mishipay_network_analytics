@@ -4,7 +4,7 @@ import 'dotenv/config';
 import validateQuery from './validator.js';
 import { AnalyticsSchema, GetUserSchema } from './validator.js';
 import { getUserInfo, getAnalytics } from './controllers.js';
-import { asyncHandler, globalErrorHandler } from './utils.js';
+import { asyncHandler, globalErrorHandler } from './utils/utils.js';
 import HttpException from './error.js';
 
 const app = express();

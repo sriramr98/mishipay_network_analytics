@@ -5,6 +5,7 @@ export const asyncHandler = (fn) => (req, res, next) => {
 };
 
 export const globalErrorHandler = (err, req, res, next) => {
+    console.error(err);
     if (err instanceof HttpException) {
         return res.status(err.getStatusCode()).json(err.getErrResponse());
     }

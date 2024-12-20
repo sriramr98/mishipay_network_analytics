@@ -1,4 +1,4 @@
-import HttpException from './error.js';
+import HttpException from '../error.js';
 
 export const asyncHandler = (fn) => (req, res, next) => {
     fn(req, res, next).catch(next);

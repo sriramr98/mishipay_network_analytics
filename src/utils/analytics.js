@@ -39,6 +39,6 @@ export const formatNetworkUsage = (kilobits) => {
         value /= 1024;
         unitIndex++;
     }
-
-    return `${value.toFixed(3)}${units[unitIndex]}`;
+    const formattedValue = value % 1 === 0 ? value.toFixed(0) : value.toFixed(1);
+    return `${formattedValue}${units[unitIndex]}`;
 };

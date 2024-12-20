@@ -5,9 +5,10 @@
   "type": "module",
   "main": "ingest.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:coverage": "nyc npm test"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +22,9 @@
     "postgres": "^3.4.5"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.1.9",
+    "nyc": "^17.1.0",
     "prettier": "^3.4.2"
   }
 }

@@ -8,7 +8,7 @@ export const AnalyticsSchema = Joi.object({
 
 export const GetUserSchema = Joi.object({
     username: Joi.string().required(),
-    datetime: Joi.date().timestamp(),
+    datetime: Joi.string().length(13).required(), // yyyyMMddThhmm format
 });
 
 const validateQuery = (schema) => (req, res, next) => {

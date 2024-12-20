@@ -3,7 +3,7 @@ import 'dotenv/config';
 import fs from 'fs';
 import csv from 'csv-parser';
 
-import sql from './db.js';
+import sql from '../db.js';
 
 const SECONDS_IN_AN_HOUR = 3600;
 const SECONDS_IN_A_MINUTE = 60;
